@@ -27,6 +27,7 @@ namespace BankingXamarin
 
         private void DepositButton_Clicked(object sender, EventArgs e)
         {
+            //thix comment
 
             decimal depositAmount = 0;
 
