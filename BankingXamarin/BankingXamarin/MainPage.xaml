@@ -14,6 +14,13 @@
         <Entry x:Name="DepositEntry" Placeholder="Deposit Reason" />
         <Button x:Name="DepositButton" Text="Deposit" Clicked="DepositButton_Clicked"/>
 
+
+        <Entry x:Name="WithdrawAmountEntry" Placeholder="Withdrawal Amount" Keyboard="Numeric" />
+        <Entry x:Name="WithdrawEntry" Placeholder="Withdraw Reason" />
+        <Button x:Name="WithdrawButton" Text="Withdraw" Clicked="WithdrawButton_Clicked"/>
+
+        <Button x:Name="HistoryButton" Text="History" Clicked="HistoryButton_Clicked"/>
+
     </StackLayout>
 
 </ContentPage>

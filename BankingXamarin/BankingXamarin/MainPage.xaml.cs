@@ -45,5 +45,33 @@ namespace BankingXamarin
             }
 
         }
+
+        private void WithdrawButton_Clicked(object sender, EventArgs e)
+        {
+            //thix comment
+
+            decimal withdrawAmount = 0;
+
+            var validWithdraw = decimal.TryParse(WithdrawAmountEntry.Text, out withdrawAmount);
+            var reasonWithdraw = WithdrawEntry.Text;
+            if (validWithdraw)
+            {
+                _account.WithdrawMoney(withdrawAmount, DateTime.Now, "Stipend");
+
+            }
+
+            else
+            {
+                DisplayAlert("Validation Error", "Please Enter a Number", "Cancel");
+            }
+
+        }
+
+        private void HistoryButton_Clicked(object sender, EventArgs e)
+        {
+            string history = _account.GetTransactionHistory();
+
+            DisplayAlert("Transaction History", history, "OK");
+        }
     }
 }
